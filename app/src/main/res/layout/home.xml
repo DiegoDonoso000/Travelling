@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/home_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/home_title"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="btn_camera,btn_favorite,btn_mountain,btn_face"
+        app:layout_marginBaseline="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/home_title" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_camera"
+        style="@style/Travelling.Icon.Button"
+        android:backgroundTint="@color/azul_claro"
+        android:contentDescription="@string/btn_camera"
+        app:icon="@drawable/ic_baseline_camera_alt_24"
+        app:layout_constraintEnd_toStartOf="@+id/btn_favorite"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barrier2"
+         />
+
+    <com.google.android.material.button.MaterialButton
+
+        android:id="@+id/btn_favorite"
+        style="@style/Travelling.Icon.Button"
+        android:backgroundTint="@color/lavanda"
+        android:contentDescription="@string/btn_fav"
+        app:icon="@drawable/ic_baseline_favorite_24"
+        app:layout_constraintEnd_toStartOf="@+id/btn_mountain"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_camera"
+        app:layout_constraintTop_toBottomOf="@+id/barrier2"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_mountain"
+        style="@style/Travelling.Icon.Button"
+        android:backgroundTint="@color/rosa"
+        android:contentDescription="@string/btn_terrain"
+        app:icon="@drawable/ic_baseline_terrain_24"
+        app:layout_constraintEnd_toStartOf="@+id/btn_face"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_favorite"
+        app:layout_constraintTop_toBottomOf="@+id/barrier2"
+         />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_face"
+        style="@style/Travelling.Icon.Button"
+        android:backgroundTint="@color/amarillo_claro"
+        android:contentDescription="@string/btn_face"
+        app:icon="@drawable/ic_baseline_face_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginRight="8dp"
+        app:layout_constraintStart_toEndOf="@+id/btn_mountain"
+        app:layout_constraintTop_toBottomOf="@+id/barrier2"
+         />
+
+    <androidx.cardview.widget.CardView
+        style="@style/Travelling.Home.Card"
+        android:id="@+id/cardView1"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_camera">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/card1_img"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/azul_claro"
+                android:scaleType="centerInside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/calendar"></androidx.appcompat.widget.AppCompatImageView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/card1_subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/card1_subtitle"
+                android:textAppearance="?appTravellingBody1Inverse"
+                app:layout_constraintTop_toBottomOf="@+id/card1_img"></androidx.appcompat.widget.AppCompatTextView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/card1_Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="30dp"
+                android:text="@string/card1_title"
+                android:textAppearance="?appTravellingH5Bold"
+                app:layout_constraintTop_toBottomOf="@+id/card1_subtitle"></androidx.appcompat.widget.AppCompatTextView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        style="@style/Travelling.Home.Card"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardView1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/card2_img"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="center"
+                android:background="@color/agua"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/relax"></androidx.appcompat.widget.AppCompatImageView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/card2_subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/card2_subtitle"
+                android:textAppearance="?appTravellingBody1Inverse"
+                app:layout_constraintTop_toBottomOf="@+id/card2_img"></androidx.appcompat.widget.AppCompatTextView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/card2_Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:paddingLeft="30dp"
+                android:text="@string/card2_title"
+                android:textAppearance="?appTravellingH5Bold"
+                app:layout_constraintTop_toBottomOf="@+id/card2_subtitle"></androidx.appcompat.widget.AppCompatTextView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

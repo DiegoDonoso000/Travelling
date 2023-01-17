@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="appTravellingH1" format="reference"></attr>
+    <attr name="appTravellingH2" format="reference"></attr>
+    <attr name="appTravellingH3" format="reference"></attr>
+    <attr name="appTravellingH4" format="reference"></attr>
+    <attr name="appTravellingH5" format="reference"></attr>
+    <attr name="appTravellingH5Bold" format="reference"></attr>
+    <attr name="appTravellingH6" format="reference"></attr>
+    <attr name="appTravellingButton" format="reference"></attr>
+    <attr name="appTravellingBody1" format="reference"></attr>
+    <attr name="appTravellingBody1Inverse" format="reference"></attr>
+    <attr name="appTravellingBody2" format="reference"></attr>
+    <attr name="appTravellingBody2Inverse" format="reference"></attr>
+</resources>

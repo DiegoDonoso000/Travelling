@@ -7,4 +7,21 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <!--Travelling Colors-->
+    <color name="texto_inverso">#808080</color>
+    <color name="azul_claro">#CBE3FF</color>
+    <color name="agua">#CFFFF6</color>
+    <color name="lavanda">#ECDDFF</color>
+    <color name="lavanda1">#DEDDF7</color>
+    <color name="rosa">#FFDBF5</color>
+    <color name="amarillo_claro">#FFF2AE</color>
+    <!--Theme Colors-->
+    <color name="primaryColor">#009688</color>
+    <color name="primaryLightColor">#52c7b8</color>
+    <color name="primaryDarkColor">#00675b</color>
+    <color name="secondaryColor">#ffea00</color>
+    <color name="secondaryLightColor">#ffff56</color>
+    <color name="secondaryDarkColor">#c7b800</color>
+    <color name="primaryTextColor">#fafafa</color>
+    <color name="secondaryTextColor">#4f342c</color>
 </resources>

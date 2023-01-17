@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Travelling</string>
+    <string name="onboard_titulo1">Tu App de Viajes</string>
+    <string name="onboard_descripcion">Hola! estamos buscando a usuarios con inquietudes y ganas de viajar.
+        Si eres tú? no lo dudes, accede a nuestra app y descubrirá miles de destinos y facilidades para alquilar coches, ver el tiempo, etc</string>
+    <string name="card1_title">City of Los Angeles</string>
+    <string name="card2_title">Beach vacation</string>
+    <string name="card1_subtitle">USA, los Angeles 2 weeks</string>
+    <string name="card2_subtitle">Maldivas 3 weeks</string>
+    <string name="btn_camera">camera</string>
+    <string name="btn_fav">favourite</string>
+    <string name="btn_terrain">terrain</string>
+    <string name="btn_face">face</string>
+    <string name="home_title">Upcoming meetups</string>
+    <string name="next_button">Next</string>
+
 </resources>
