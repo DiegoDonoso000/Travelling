@@ -14,7 +14,7 @@
         android:layout_marginTop="10dp"
         android:paddingBottom="10dp"
         android:text="@string/home_title"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+        android:textAppearance="?appTravellingH4"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
