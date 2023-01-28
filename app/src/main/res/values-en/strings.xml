@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Travelling</string>
+    <string name="onboard_titulo1">Your trip App</string>
+    <string name="card1_title">City of Los Angeles</string>
+    <string name="card2_title">Beach vacation</string>
+    <string name="card1_subtitle">USA, los Angeles 2 weeks</string>
+    <string name="card2_subtitle">Maldivas 3 weeks</string>
+    <string name="btn_camera">camera</string>
+    <string name="btn_fav">favourite</string>
+    <string name="btn_terrain">terrain</string>
+    <string name="btn_face">face</string>
+    <string name="home_title">Upcoming meetups</string>
+    <string name="next_button">Next</string>
+    <string name="login_titulo">Login</string>
+    <string name="pwd_forgot_text">Forgot password?</string>
+    <string name="pwd_forgot_action_text">Get new</string>
+    <string name="account_create_text">Do you have an account?</string>
+    <string name="account_create_action_text">Create new</string>
+    <string name="login_usuari_hint">Login</string>
+    <string name="login_password_hint">Password</string>
+    <string name="in_construction_text">functionality under construction</string>
+    <string name="onboard_descripcion">Hello! We are looking for users with concerns and a desire to travel. If it\'s you? Do not hesitate, access our app and you will discover thousands of destinations and facilities to rent cars, see the weather, etc</string>
+</resources>

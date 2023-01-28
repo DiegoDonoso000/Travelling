@@ -1,10 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Travelling</string>
     <string name="onboard_titulo1">Tu App de Viajes</string>
     <string name="in_construction_text">funcionalidad en construcción</string>
     <string name="login_password_hint">Contraseña</string>
     <string name="login_usuari_hint">Usuario</string>
-    <string name="account_create_action_text">Crear una</string>
+    <string name="account_create_action_text">Crear nuevo</string>
     <string name="account_create_text">Tienes una cuenta?</string>
     <string name="pwd_forgot_action_text">Recuperar</string>
     <string name="pwd_forgot_text">Olvidó contraseña?</string>
