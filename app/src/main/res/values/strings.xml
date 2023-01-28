@@ -13,5 +13,6 @@
     <string name="btn_face">face</string>
     <string name="home_title">Upcoming meetups</string>
     <string name="next_button">Next</string>
+    <string name="login_titulo">Login</string>
 
 </resources>
