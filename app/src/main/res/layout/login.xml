@@ -10,7 +10,7 @@
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/nomads_city_tour_img"
         android:layout_width="wrap_content"
-        android:layout_height="500dp"
+        android:layout_height="400dp"
         android:scaleType="centerInside"
         android:src="@drawable/nomads_city_tour"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,8 +20,8 @@
         android:id="@+id/login_title1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/margin_login_input"
-        android:paddingVertical="10dp"
+        android:layout_marginHorizontal="@dimen/horizontal_margin_login_input"
+
         android:text="@string/login_titulo"
         android:textAppearance="?textAppearanceHeadline4"
         android:textStyle="bold"
@@ -31,47 +31,116 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/login_usuari"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginHorizontal="@dimen/margin_login_input"
-        android:hint="hola"
-        app:layout_constraintTop_toBottomOf="@+id/login_title1">
-
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/horizontal_margin_login_input"
+        android:layout_marginTop="@dimen/top_margin_login_input"
+        android:hint="@string/login_usuari_hint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_title1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
-            android:hint="Character Counter Limit 10"></com.google.android.material.textfield.TextInputEditText>
+            android:textAppearance="@style/TextAppearance.Travelling.Body2"
+            ></com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/login_password"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginHorizontal="@dimen/margin_login_input"
-        android:hint="hola"
-        app:layout_constraintTop_toBottomOf="@+id/login_usuari">
+        android:layout_height="wrap_content"
+        android:hint="@string/login_password_hint"
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/ic_baseline_lock_24"
+        android:layout_marginHorizontal="@dimen/horizontal_margin_login_input"
+        android:layout_marginTop="@dimen/top_margin_login_input"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_usuari"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Character Counter Limit 10">
+            android:layout_height="match_parent"
+            android:inputType="textPassword"
+            >
+
         </com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
 
-
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/onboard_button_next"
-        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:id="@+id/login_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/horizontal_margin_login_input"
+        android:layout_marginTop="@dimen/top_margin_login_input"
         android:backgroundTint="@color/black"
-        android:text="@string/next_button"
+        android:paddingVertical="10dp"
+        android:text="@string/login_titulo"
         android:textAllCaps="false"
+        android:textAppearance="?textAppearanceHeadline5"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:icon="@drawable/ic_baseline_arrow_forward_24"
+        app:iconGravity="textEnd"
+        app:iconPadding="10dp"
+        app:iconTint="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_password" />
 
+    <LinearLayout
+        android:id="@+id/login_forgot_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/horizontal_margin_login_input"
+        android:layout_marginTop="@dimen/top_margin_login_input"
+        android:paddingBottom="5dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/login_button">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/pwd_forgot_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pwd_forgot_text"
+            android:textAppearance="?appTravellingBody2Inverse">
+        </androidx.appcompat.widget.AppCompatTextView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/pwd_forgot_action_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="@string/pwd_forgot_action_text"
+            android:textAppearance="?appTravellingBody2">
+        </androidx.appcompat.widget.AppCompatTextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/login_get_account_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/horizontal_margin_login_input"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/login_forgot_frame">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/get_account_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?appTravellingBody2Inverse"
+            android:text="@string/account_create_text">
+        </androidx.appcompat.widget.AppCompatTextView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/get_account_action_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:textAppearance="?appTravellingBody2"
+            android:text="@string/account_create_action_text">
+        </androidx.appcompat.widget.AppCompatTextView>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

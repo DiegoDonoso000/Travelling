@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="margin_login_input">25dp</dimen>
+    <dimen name="horizontal_margin_login_input">25dp</dimen>
+    <dimen name="top_margin_login_input">12dp</dimen>
 </resources>

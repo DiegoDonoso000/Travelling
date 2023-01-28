@@ -14,5 +14,10 @@
     <string name="home_title">Upcoming meetups</string>
     <string name="next_button">Next</string>
     <string name="login_titulo">Login</string>
-
+    <string name="pwd_forgot_text">Forgot password</string>
+    <string name="pwd_forgot_action_text">Get new</string>
+    <string name="account_create_text">Do you have an account?</string>
+    <string name="account_create_action_text">Create new</string>
+    <string name="login_usuari_hint">Login</string>
+    <string name="login_password_hint">Password</string>
 </resources>

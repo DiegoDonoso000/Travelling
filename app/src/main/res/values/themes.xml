@@ -22,7 +22,7 @@
         <item name="appTravellingBody1">@style/TextAppearance.Travelling.Body1</item>
         <item name="appTravellingBody1Inverse">@style/TextAppearance.Travelling.Body1.Inverse</item>
         <item name="appTravellingBody2">@style/TextAppearance.Travelling.Body2</item>
-        <item name="appTravellingBody2Inverse">@style/TextAppearance.Travelling.Body1.Inverse</item>
+        <item name="appTravellingBody2Inverse">@style/TextAppearance.Travelling.Body2.Inverse</item>
         <item name="appTravellingButton">@style/TextAppearance.Travelling.Button</item>
     </style>
 </resources>

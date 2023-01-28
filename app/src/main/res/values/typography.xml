@@ -65,6 +65,9 @@
         <item name="android:fontFamily">@font/raleway</item>
         <item name="android:textSize">14sp</item>
     </style>
+    <style name="TextAppearance.Travelling.Body2.Inverse">
+        <item name="android:textColor">@color/texto_inverso</item>
+    </style>
 
     <style name="TextAppearance.Travelling.Button" parent="TextAppearance.MaterialComponents.Button">
         <item name="fontFamily">@font/raleway</item>

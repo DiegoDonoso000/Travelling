@@ -23,6 +23,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+
+
         Window window = this.getWindow();
         window.setStatusBarColor(this.getColor(R.color.status_bar_onboarding));
         setContentView(R.layout.onboarding);
@@ -36,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     private void actionPulseBtn() {
         Window window = this.getWindow();
         window.setStatusBarColor(this.getColor(R.color.status_bar_home));
-        setContentView(R.layout.home);
+        setContentView(R.layout.login);
     }
 
 }
