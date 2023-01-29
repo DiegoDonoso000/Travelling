@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
-import com.google.android.material.button.MaterialButton;
 import com.google.android.material.snackbar.Snackbar;
 
 import es.travelWorld.travelling.databinding.ActivityMainBinding;
@@ -13,12 +12,10 @@ import es.travelWorld.travelling.databinding.LoginBinding;
 import es.travelWorld.travelling.databinding.OnboardingBinding;
 
 public class MainActivity extends AppCompatActivity {
-    private boolean isDetailExpand;
-    View view;
     ActivityMainBinding bindingMainActivity;
     OnboardingBinding bindingOnboard;
-    LoginBinding bindingLogin;
     HomeBinding bindingHome;
+    LoginBinding bindingLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,17 +28,27 @@ public class MainActivity extends AppCompatActivity {
         Window window = this.getWindow();
         window.setStatusBarColor(this.getColor(R.color.status_bar_onboarding));
         setContentView(bindingOnboard.getRoot());
-        setListeners();
+        setOnboardingListeners();
     }
 
-    private void setListeners() {
-        // escuchar el boton
+    private void setOnboardingListeners() {
+        // escuchar el boton next de Onboarding
         bindingOnboard.onboardButtonNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                actionPulseBtn();
+                actionPulseBtnNextOnboarding();
             }
         });
+    }
+    private void actionPulseBtnNextOnboarding() {
+        Window window = this.getWindow();
+        window.setStatusBarColor(this.getColor(R.color.status_bar_home));
+        setContentView(bindingLogin.getRoot());
+        setLoginListeners();
+    }
+
+    private void setLoginListeners() {
+        // gestionar click en get new de
         bindingLogin.pwdForgotActionText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,11 +63,5 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void actionPulseBtn() {
-        Window window = this.getWindow();
-        window.setStatusBarColor(this.getColor(R.color.status_bar_home));
-        setContentView(bindingLogin.getRoot());
-//        setContentView(bindingHome.getRoot());
-    }
 
 }
