@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Travelling" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.Travelling" parent="Theme.MaterialComponents.DayNight">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorPrimaryVariant">@color/primaryDarkColor</item>
@@ -25,4 +25,9 @@
         <item name="appTravellingBody2Inverse">@style/TextAppearance.Travelling.Body2.Inverse</item>
         <item name="appTravellingButton">@style/TextAppearance.Travelling.Button</item>
     </style>
+    <style name="Theme.Travelling.noBar" >
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
 </resources>
