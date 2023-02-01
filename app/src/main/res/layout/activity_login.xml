@@ -2,11 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/onboarding_activity"
+    android:id="@+id/activity_login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
+    tools:context=".LoginActivity">
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/nomads_city_tour_img"
         android:layout_width="wrap_content"
@@ -141,8 +140,4 @@
             android:text="@string/account_create_action_text">
         </androidx.appcompat.widget.AppCompatTextView>
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-

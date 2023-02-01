@@ -21,4 +21,6 @@
     <string name="login_password_hint">Password</string>
     <string name="in_construction_text">functionality under construction</string>
     <string name="onboard_descripcion">Hello! We are looking for users with concerns and a desire to travel. If it\'s you? Do not hesitate, access our app and you will discover thousands of destinations and facilities to rent cars, see the weather, etc</string>
+    <string name="label_spinner_text">Chose destination</string>
+    <string name="in_construction_text_handler">in construction</string>
 </resources>

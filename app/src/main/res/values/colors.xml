@@ -18,6 +18,8 @@
     <!--Travelling Background Colors-->
     <color name="status_bar_onboarding">@color/lavanda1</color>
     <color name="status_bar_home">@color/white</color>
+    <color name="status_bar_login">@color/white</color>
+    <color name="status_bar_main">@color/white</color>
     <!--Theme Colors-->
     <color name="primaryColor">#009688</color>
     <color name="primaryLightColor">#52c7b8</color>
@@ -28,5 +30,6 @@
     <color name="secondaryDarkColor">#c7b800</color>
     <color name="primaryTextColor">#774242</color>
     <color name="secondaryTextColor">#4f342c</color>
+
 
 </resources>

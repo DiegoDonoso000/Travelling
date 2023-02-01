@@ -2,11 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/home_activity"
+    android:id="@+id/activity_home"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
+    tools:context=".HomeActivity">
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/home_title"
         android:layout_width="match_parent"
@@ -41,7 +40,7 @@
         android:layout_marginLeft="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/barrier2"
-         />
+        />
 
     <com.google.android.material.button.MaterialButton
 
@@ -66,7 +65,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btn_favorite"
         app:layout_constraintTop_toBottomOf="@+id/barrier2"
-         />
+        />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_face"
@@ -79,7 +78,7 @@
         android:layout_marginRight="8dp"
         app:layout_constraintStart_toEndOf="@+id/btn_mountain"
         app:layout_constraintTop_toBottomOf="@+id/barrier2"
-         />
+        />
 
     <androidx.cardview.widget.CardView
         style="@style/Travelling.Home.Card"
@@ -174,4 +173,11 @@
                 app:layout_constraintTop_toBottomOf="@+id/card2_subtitle"></androidx.appcompat.widget.AppCompatTextView>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/texto_entrada"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        ></TextView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

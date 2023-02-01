@@ -21,4 +21,6 @@
     <string name="card2_title">Vacaciones en la playa</string>
     <string name="card1_title">Ciudad de los Angeles</string>
     <string name="onboard_descripcion">Hola! estamos buscando a usuarios con inquietudes y ganas de viajar.         Si eres tú? no lo dudes, accede a nuestra app y descubrirá miles de destinos y facilidades para alquilar coches, ver el tiempo, etc</string>
+    <string name="label_spinner_text">Seleccione destino</string>
+    <string name="in_construction_text_handler">en construccion</string>
 </resources>

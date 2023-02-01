@@ -1,67 +1,62 @@
 package es.travelWorld.travelling;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
-import com.google.android.material.snackbar.Snackbar;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import es.travelWorld.travelling.databinding.ActivityMainBinding;
-import es.travelWorld.travelling.databinding.HomeBinding;
-import es.travelWorld.travelling.databinding.LoginBinding;
-import es.travelWorld.travelling.databinding.OnboardingBinding;
-
 public class MainActivity extends AppCompatActivity {
+    public static final String DESTINY="para enviar el destino";
     ActivityMainBinding bindingMainActivity;
-    OnboardingBinding bindingOnboard;
-    HomeBinding bindingHome;
-    LoginBinding bindingLogin;
+    private String[] destinations;
+    private String destination;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bindingMainActivity= ActivityMainBinding.inflate(getLayoutInflater());
-        bindingOnboard=OnboardingBinding.inflate(getLayoutInflater());
-        bindingHome= HomeBinding.inflate(getLayoutInflater());
-        bindingLogin=LoginBinding.inflate(getLayoutInflater());
-
-        Window window = this.getWindow();
-        window.setStatusBarColor(this.getColor(R.color.status_bar_onboarding));
-        setContentView(bindingOnboard.getRoot());
-        setOnboardingListeners();
+        Window window=getWindow();
+        window.setStatusBarColor(this.getColor(R.color.status_bar_main));
+        setContentView(bindingMainActivity.getRoot());
+        setValues();
+        setListeners();
     }
 
-    private void setOnboardingListeners() {
-        // escuchar el boton next de Onboarding
-        bindingOnboard.onboardButtonNext.setOnClickListener(new View.OnClickListener() {
+    private void setValues() {
+        destinations= new String[]{"","Mendoza", "San Luis", "La Pampa"," Tarragona","Barcelona"};
+        ArrayAdapter arrayList=new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item,destinations);
+        bindingMainActivity.mainSpinner.setAdapter(null);
+        bindingMainActivity.mainSpinner.setAdapter(arrayList);
+    }
+    private void setListeners() {
+        bindingMainActivity.homeButton.setOnClickListener(view -> actionPulseBtn(HomeActivity.class));
+        bindingMainActivity.loginButton.setOnClickListener(view -> actionPulseBtn(LoginActivity.class));
+        bindingMainActivity.onboardingButton.setOnClickListener(view -> actionPulseBtn(OnboardingActivity.class));
+        bindingMainActivity.mainSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onClick(View view) {
-                actionPulseBtnNextOnboarding();
+            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
+                bindingMainActivity.itemSelected.setText("");
+                destination= (String) adapterView.getItemAtPosition(position);
+                if (destination!="") {
+                    bindingMainActivity.itemSelected.setText("el destino seleccionado es " + destination);
+                }
             }
-        });
-    }
-    private void actionPulseBtnNextOnboarding() {
-        Window window = this.getWindow();
-        window.setStatusBarColor(this.getColor(R.color.status_bar_home));
-        setContentView(bindingLogin.getRoot());
-        setLoginListeners();
-    }
-
-    private void setLoginListeners() {
-        // gestionar click en get new de
-        bindingLogin.pwdForgotActionText.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view,R.string.in_construction_text,Snackbar.LENGTH_LONG).show();
-            }
-        });
-        bindingLogin.getAccountActionText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view,R.string.in_construction_text,Snackbar.LENGTH_LONG).show();
+            public void onNothingSelected(AdapterView<?> adapterView) {
             }
         });
     }
 
+    private void actionPulseBtn(Class cls) {
+        Intent intent= new Intent(this,cls);
+        intent.putExtra(DESTINY,destination);
+        startActivity(intent);
+    }
 
 }
