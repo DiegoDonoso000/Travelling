@@ -20,6 +20,8 @@
     <color name="status_bar_home">@color/white</color>
     <color name="status_bar_login">@color/white</color>
     <color name="status_bar_main">@color/white</color>
+    <color name="background_new_account">@color/agua</color>
+
     <!--Theme Colors-->
     <color name="primaryColor">#009688</color>
     <color name="primaryLightColor">#52c7b8</color>
