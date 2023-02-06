@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 
 import es.travelWorld.travelling.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
@@ -33,23 +34,12 @@ public class MainActivity extends AppCompatActivity {
         bindingMainActivity.mainSpinner.setAdapter(null);
         bindingMainActivity.mainSpinner.setAdapter(arrayList);
     }
+
     private void setListeners() {
         bindingMainActivity.homeButton.setOnClickListener(view -> actionPulseBtn(HomeActivity.class));
         bindingMainActivity.loginButton.setOnClickListener(view -> actionPulseBtn(LoginActivity.class));
         bindingMainActivity.onboardingButton.setOnClickListener(view -> actionPulseBtn(OnboardingActivity.class));
-        bindingMainActivity.mainSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
-                bindingMainActivity.itemSelected.setText("");
-                destination= (String) adapterView.getItemAtPosition(position);
-                if (destination!="") {
-                    bindingMainActivity.itemSelected.setText("el destino seleccionado es " + destination);
-                }
-            }
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-            }
-        });
+        bindingMainActivity.newAccountButton.setOnClickListener(view -> actionPulseBtn(NewAccountActivity.class));
     }
 
     private void actionPulseBtn(Class cls) {
@@ -57,5 +47,6 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(DESTINY,destination);
         startActivity(intent);
     }
+
 
 }

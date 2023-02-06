@@ -15,12 +15,16 @@
     <color name="lavanda1">#DEDDF7</color>
     <color name="rosa">#FFDBF5</color>
     <color name="amarillo_claro">#FFF2AE</color>
+    <color name="verde_claro">#D1EEE6</color>
     <!--Travelling Background Colors-->
     <color name="status_bar_onboarding">@color/lavanda1</color>
     <color name="status_bar_home">@color/white</color>
     <color name="status_bar_login">@color/white</color>
     <color name="status_bar_main">@color/white</color>
     <color name="background_new_account">@color/agua</color>
+    <color name="input_new_account">@color/verde_claro</color>
+
+
 
     <!--Theme Colors-->
     <color name="primaryColor">#009688</color>

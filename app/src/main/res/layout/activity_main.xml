@@ -33,6 +33,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/home_button"></androidx.appcompat.widget.AppCompatButton>
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/new_account_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:text="Nueva Cuenta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_button"></androidx.appcompat.widget.AppCompatButton>
+
     <TextView
         android:id="@+id/labelSpinner"
         android:layout_width="match_parent"
@@ -42,7 +51,7 @@
         android:paddingHorizontal="3dp"
         android:text="@string/label_spinner_text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/login_button"></TextView>
+        app:layout_constraintTop_toBottomOf="@id/new_account_button"></TextView>
 
     <androidx.appcompat.widget.AppCompatSpinner
         android:id="@+id/main_spinner"
@@ -56,14 +65,5 @@
         android:paddingHorizontal="0dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/labelSpinner"></androidx.appcompat.widget.AppCompatSpinner>
-
-    <TextView
-        android:id="@+id/item_selected"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:gravity="center"
-        tools:text="sdsd"></TextView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

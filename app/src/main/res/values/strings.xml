@@ -1,4 +1,11 @@
 <resources>
+    <string-array name="age_groups_array">
+        <item>0-5</item>
+        <item>6-11</item>
+        <item>12-17</item>
+        <item>18-99</item>
+    </string-array>
+
     <string name="app_name">Travelling</string>
     <string name="onboard_titulo1">Tu App de Viajes</string>
     <string name="in_construction_text">funcionalidad en construcción</string>
@@ -23,4 +30,7 @@
     <string name="in_construction_text_handler">in construction</string>
     <string name="label_spinner_text">Seleccione destino</string>
     <string name="new_account_label">Registro</string>
+    <string name="account_name_hint">¿Cómo te llamas?</string>
+    <string name="account_surname_hint">¿Y tu apellido?</string>
+    <string name="account_age_hint">¿Cuántos años tienes?</string>
 </resources>
