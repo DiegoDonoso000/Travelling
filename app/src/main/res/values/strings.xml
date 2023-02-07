@@ -33,4 +33,5 @@
     <string name="account_name_hint">¿Cómo te llamas?</string>
     <string name="account_surname_hint">¿Y tu apellido?</string>
     <string name="account_age_hint">¿Cuántos años tienes?</string>
+    <string name="error_text_name">“Ups, no creo que sea correcto, revísalo</string>
 </resources>
