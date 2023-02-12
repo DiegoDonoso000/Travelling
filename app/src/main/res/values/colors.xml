@@ -7,6 +7,18 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!--Theme Colors-->
+    <color name="primaryColor">#009688</color>
+    <color name="primaryLightColor">#52c7b8</color>
+    <color name="primaryDarkColor">#1BC715</color>
+    <color name="colorAccent">#FF000000</color>
+    <color name="secondaryColor">#ffea00</color>
+    <color name="secondaryLightColor">#ffff56</color>
+    <color name="secondaryDarkColor">#c7b800</color>
+    <color name="primaryTextColor">#774242</color>
+    <color name="secondaryTextColor">#4f342c</color>
+
     <!--Travelling Colors-->
     <color name="texto_inverso">#808080</color>
     <color name="azul_claro">#CBE3FF</color>
@@ -16,26 +28,20 @@
     <color name="rosa">#FFDBF5</color>
     <color name="amarillo_claro">#FFF2AE</color>
     <color name="verde_claro">#D1EEE6</color>
+    <color name="verde_oscuro">#00695C</color>
+
     <!--Travelling Background Colors-->
     <color name="status_bar_onboarding">@color/lavanda1</color>
     <color name="status_bar_home">@color/white</color>
     <color name="status_bar_login">@color/white</color>
     <color name="status_bar_main">@color/white</color>
-    <color name="background_new_account">@color/agua</color>
+    <color name="background_new_account">@color/verde_oscuro</color>
     <color name="input_new_account">@color/verde_claro</color>
 
+    <color name="disabled_button_color">#A0A0A0</color>
 
 
-    <!--Theme Colors-->
-    <color name="primaryColor">#009688</color>
-    <color name="primaryLightColor">#52c7b8</color>
-    <color name="primaryDarkColor">#AF2020</color>
-    <color name="colorAccent">#FF000000</color>
-    <color name="secondaryColor">#ffea00</color>
-    <color name="secondaryLightColor">#ffff56</color>
-    <color name="secondaryDarkColor">#c7b800</color>
-    <color name="primaryTextColor">#774242</color>
-    <color name="secondaryTextColor">#4f342c</color>
+
 
 
 </resources>

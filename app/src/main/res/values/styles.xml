@@ -21,7 +21,9 @@
         <item name="cornerSizeBottomLeft">30dp</item>
         <item name="cornerSizeBottomRight">30dp</item>
     </style>
-
+    <style name="CircularImg">
+        <item name="cornerSize">50%</item>
+    </style>
     <style name="btn_test1">
         <item name="android:textColor">@color/rosa</item>
         <item name="android:layout_width">wrap_content</item>

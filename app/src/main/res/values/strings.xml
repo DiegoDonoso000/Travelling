@@ -33,5 +33,9 @@
     <string name="account_name_hint">¿Cómo te llamas?</string>
     <string name="account_surname_hint">¿Y tu apellido?</string>
     <string name="account_age_hint">¿Cuántos años tienes?</string>
-    <string name="error_text_name">“Ups, no creo que sea correcto, revísalo</string>
+    <string name="error_text_name">Ups, no creo que sea correcto, revísalo</string>
+    <string name="error_age">Esta app no es para ti</string>
+    <string name="pointme">Me apunto</string>
+    <string name="privacy_policy">Política de Privacidad</string>
+    <string name="account_create_conditions">Ver Condiciones</string>
 </resources>

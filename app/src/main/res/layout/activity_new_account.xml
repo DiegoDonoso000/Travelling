@@ -17,129 +17,149 @@
         app:title="@string/new_account_label"
         app:navigationIcon="@drawable/ic_back"
         android:background="?attr/colorPrimary"
+        app:titleTextColor="@color/white"
         app:layout_collapseMode="pin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
     </com.google.android.material.appbar.MaterialToolbar>
     </com.google.android.material.appbar.AppBarLayout>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
-        >
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/user_picture"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:background="@color/agua"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/imagen_registro">
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
-    </androidx.appcompat.widget.AppCompatImageView>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/user_picture"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="40dp"
+            android:background="@color/agua"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/CircularImg"
+            app:srcCompat="@drawable/imagen_registro"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+        ></com.google.android.material.imageview.ShapeableImageView>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/account_firstname_lay"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/input_new_account"
-        android:layout_marginHorizontal="@dimen/horizontal_margin_login_input"
-        android:layout_marginTop="@dimen/top_margin_login_input"
-        android:hint="@string/account_name_hint"
-        app:startIconDrawable="@drawable/ic_face"
-        app:endIconMode="password_toggle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_picture">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/account_first_name"
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floating_camera_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toBottomOf="@+id/user_picture"
+            app:layout_constraintEnd_toEndOf="@+id/user_picture"
+            app:layout_constraintStart_toStartOf="@+id/user_picture"
+            app:srcCompat="@drawable/ic_baseline_camera_alt_24" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/account_firstname_lay"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:errorEnabled="true"
-            android:textAppearance="@style/TextAppearance.Travelling.Body2"></com.google.android.material.textfield.TextInputEditText>
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginHorizontal="@dimen/horizontal_margin_login_input"
+            android:layout_marginTop="@dimen/top_margin_login_input"
+            android:background="@color/input_new_account"
+            android:hint="@string/account_name_hint"
+            app:endIconMode="password_toggle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_picture"
+            app:startIconDrawable="@drawable/ic_face">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/account_surname_lay"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/horizontal_margin_login_input"
-        android:layout_marginTop="@dimen/top_margin_login_input"
-        android:background="@color/input_new_account"
-        android:hint="@string/account_surname_hint"
-        app:startIconDrawable="@drawable/ic_face"
-        app:endIconMode="password_toggle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/account_firstname_lay">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/account_first_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.Travelling.Body2"
+                app:errorEnabled="true"></com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/account_surname"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:errorEnabled="true"
-        android:textAppearance="@style/TextAppearance.Travelling.Body2"
-        >
-    </com.google.android.material.textfield.TextInputEditText>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
-        android:id="@+id/age_groups_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/account_age_hint"
-        android:layout_marginHorizontal="@dimen/horizontal_margin_login_input"
-        android:layout_marginTop="@dimen/top_margin_login_input"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/account_surname_lay">
-        <AutoCompleteTextView
-            android:id="@+id/age_groups"
-            android:layout_width="fill_parent"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/account_surname_lay"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:errorEnabled="true"
-            ></AutoCompleteTextView>
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginHorizontal="@dimen/horizontal_margin_login_input"
+            android:layout_marginTop="@dimen/top_margin_login_input"
+            android:background="@color/input_new_account"
+            android:hint="@string/account_surname_hint"
+            app:endIconMode="password_toggle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/account_firstname_lay"
+            app:startIconDrawable="@drawable/ic_face">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/account_surname"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAppearance="@style/TextAppearance.Travelling.Body2"
+                app:errorEnabled="true"></com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/age_groups_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/horizontal_margin_login_input"
+            android:layout_marginTop="@dimen/top_margin_login_input"
+            android:hint="@string/account_age_hint"
+            android:textAppearance="@style/TextAppearance.Travelling.Body2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/account_surname_lay">
+
+            <AutoCompleteTextView
+                android:id="@+id/age_groups"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true"></AutoCompleteTextView>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/age_button"
+            android:id="@+id/accept_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="36dp"
+            android:background="@drawable/estado_btn"
+            android:textColor="@color/white"
+            android:enabled="false"
+            android:paddingHorizontal="50dp"
+            android:text="@string/pointme"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/login_get_account_frame"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:text="pointme"></androidx.appcompat.widget.AppCompatButton>
+            app:layout_constraintStart_toStartOf="parent"></androidx.appcompat.widget.AppCompatButton>
 
         <LinearLayout
-        android:id="@+id/login_get_account_frame"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/horizontal_margin_login_input"
-        android:layout_marginBottom="40dp"
-        android:gravity="center_horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/get_account_text"
-            android:layout_width="wrap_content"
+            android:id="@+id/login_get_account_frame"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/account_create_text"
-            android:textAppearance="?appTravellingBody2Inverse"></androidx.appcompat.widget.AppCompatTextView>
+            android:layout_marginHorizontal="@dimen/horizontal_margin_login_input"
+            android:layout_marginBottom="40dp"
+            android:gravity="center_horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/get_account_action_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:text="@string/account_create_action_text"
-            android:textAppearance="?appTravellingBody2"></androidx.appcompat.widget.AppCompatTextView>
-    </LinearLayout>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/get_account_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/privacy_policy"
+                android:textAppearance="?appTravellingBody2Inverse"></androidx.appcompat.widget.AppCompatTextView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/get_account_action_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:autoLink="web"
+                android:text="@string/account_create_conditions"
+                android:textAppearance="?appTravellingBody2"></androidx.appcompat.widget.AppCompatTextView>
+
+        </LinearLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
