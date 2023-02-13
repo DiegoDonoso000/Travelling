@@ -31,6 +31,8 @@ public class LoginActivity extends AppCompatActivity {
         }else if (result.getResultCode()== Activity.RESULT_CANCELED) {
             Log.e("Tokio","NO VINO NADA");
         }
+        bindingLoginActivity.loginUsuari.setText(null);
+        bindingLoginActivity.loginPassword.setText(null);
     });
 
     @Override
