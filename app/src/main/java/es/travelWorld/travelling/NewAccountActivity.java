@@ -1,30 +1,24 @@
 package es.travelWorld.travelling;
 
-import androidx.activity.result.ActivityResult;
-import androidx.activity.result.ActivityResultCallback;
+import static es.travelWorld.travelling.Constants.KEY_MAIN_USER;
+
 import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContract;
 import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
-
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
-import android.widget.Toast;
 
 import es.travelWorld.travelling.databinding.ActivityNewAccountBinding;
+import es.travelWorld.travelling.domain.Usuario;
 
 public class NewAccountActivity extends AppCompatActivity {
     AppCompatImageView photo;
@@ -49,7 +43,7 @@ public class NewAccountActivity extends AppCompatActivity {
     }
 
     private void setListeners(){
-        bindingActivity.toolbar.setNavigationOnClickListener(view -> Toast.makeText(NewAccountActivity.this,"Boton de navegación",Toast.LENGTH_LONG).show());
+        bindingActivity.toolbar.setNavigationOnClickListener(view -> {setBackNavigation();});
         bindingActivity.accountFirstName.addTextChangedListener(new TextWatcher() {
 
             @Override
@@ -120,12 +114,30 @@ public class NewAccountActivity extends AppCompatActivity {
 
         });
 
-        bindingActivity.acceptButton.setOnClickListener(view -> { });
+        bindingActivity.acceptButton.setOnClickListener(view -> {setUsuarioRegistro();});
 
         bindingActivity.getAccountActionText.setOnClickListener(view -> openConditionsWeb("https://developers.google.com/ml-kit/terms"));
 
         bindingActivity.floatingCameraButton.setOnClickListener(this::openCamera);
 
+    }
+
+    private void setBackNavigation() {
+        Intent intent=new Intent();
+        setResult(Activity.RESULT_CANCELED,intent);
+        finish();
+    }
+
+    private void setUsuarioRegistro() {
+        Usuario usuarioReg=new Usuario();
+        usuarioReg.setNombre(bindingActivity.accountFirstName.getText().toString());
+        usuarioReg.setApellido(bindingActivity.accountSurname.getText().toString());
+        Intent intent=new Intent();
+        Bundle bundle=new Bundle();
+        bundle.putParcelable(KEY_MAIN_USER,usuarioReg);
+        intent.putExtras(bundle);
+        setResult(Activity.RESULT_OK,intent);
+        finish();
     }
 
     private void openCamera(View view) {
@@ -135,7 +147,6 @@ public class NewAccountActivity extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
         startActivity(intent);
     }
-
     private void setButtonstatus() {
         boolean btnEnabled=!(errConditionFirstName | errConditionSurname | errConditionAge
                 | bindingActivity.accountFirstName.length()==0
@@ -143,7 +154,6 @@ public class NewAccountActivity extends AppCompatActivity {
                 | bindingActivity.ageGroups.length()==0);
         bindingActivity.acceptButton.setEnabled(btnEnabled);
     }
-
     private void setValues() {
         // Get a reference to the AutoCompleteTextView in the layout
         AutoCompleteTextView textView = (AutoCompleteTextView) bindingActivity.ageGroups;

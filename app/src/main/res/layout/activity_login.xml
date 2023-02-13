@@ -28,7 +28,7 @@
         app:layout_constraintTop_toBottomOf="@+id/nomads_city_tour_img"></TextView>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/login_usuari"
+        android:id="@+id/login_usuari_lay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/horizontal_margin_login_input"
@@ -39,6 +39,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         >
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/login_usuari"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="@style/TextAppearance.Travelling.Body2"
@@ -46,7 +47,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/login_password"
+        android:id="@+id/login_password_lay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/login_password_hint"
@@ -55,11 +56,12 @@
         android:layout_marginHorizontal="@dimen/horizontal_margin_login_input"
         android:layout_marginTop="@dimen/top_margin_login_input"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_usuari"
+        app:layout_constraintTop_toBottomOf="@+id/login_usuari_lay"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         >
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/login_password"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="textPassword"
@@ -74,7 +76,9 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/horizontal_margin_login_input"
         android:layout_marginTop="@dimen/top_margin_login_input"
-        android:backgroundTint="@color/black"
+        android:enabled="false"
+        android:drawableTint="@color/black"
+        android:backgroundTint="@color/enabled_button_login"
         android:paddingVertical="10dp"
         android:text="@string/login_titulo"
         android:textAllCaps="false"
@@ -85,7 +89,7 @@
         app:iconPadding="10dp"
         app:iconTint="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_password" />
+        app:layout_constraintTop_toBottomOf="@+id/login_password_lay" />
 
     <LinearLayout
         android:id="@+id/login_forgot_frame"

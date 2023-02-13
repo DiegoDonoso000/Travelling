@@ -25,8 +25,8 @@
         android:layout_height="wrap_content"
         app:barrierDirection="top"
         app:constraint_referenced_ids="btn_camera,btn_favorite,btn_mountain,btn_face"
-        app:layout_marginBaseline="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/home_title" />
+        app:layout_constraintTop_toBottomOf="@+id/home_title"
+        app:layout_marginBaseline="10dp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_camera"
@@ -173,11 +173,5 @@
                 app:layout_constraintTop_toBottomOf="@+id/card2_subtitle"></androidx.appcompat.widget.AppCompatTextView>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
-    <TextView
-        android:id="@+id/texto_entrada"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        ></TextView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

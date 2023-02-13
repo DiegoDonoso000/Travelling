@@ -37,8 +37,8 @@
     <color name="status_bar_main">@color/white</color>
     <color name="background_new_account">@color/verde_oscuro</color>
     <color name="input_new_account">@color/verde_claro</color>
-
     <color name="disabled_button_color">#A0A0A0</color>
+    <color name="enabled_button_login">#000000</color>
 
 
 
