@@ -17,7 +17,6 @@
         app:title="@string/new_account_label"
         app:navigationIcon="@drawable/ic_back"
         android:background="?attr/colorPrimary"
-        app:titleTextColor="@color/white"
         app:layout_collapseMode="pin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -124,7 +123,7 @@
             android:layout_marginBottom="36dp"
             android:background="@drawable/estado_btn"
             android:textColor="@color/white"
-            android:enabled="false"
+            android:enabled="true"
             android:paddingHorizontal="50dp"
             android:text="@string/pointme"
             android:textStyle="bold"

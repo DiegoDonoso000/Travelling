@@ -12,7 +12,6 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
 import android.widget.Toast;
 import com.google.android.material.snackbar.Snackbar;
 import java.util.Objects;
@@ -38,8 +37,6 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Window window=this.getWindow();
-        window.setStatusBarColor(this.getColor(R.color.status_bar_login));
         bindingLoginActivity= ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(bindingLoginActivity.getRoot());
         setListeners();
@@ -84,6 +81,8 @@ public class LoginActivity extends AppCompatActivity {
 
     private void actionLoginBtn(View view) {
         Usuario userLogin=provideFromLayout();
+//        Intent intent = new Intent(this, HomeActivity.class).putExtra(KEY_MAIN_USER, userLogin);
+//        startActivity(intent);
         if(userLogin!=null && userFromServer!=null && comparaUsuarios(userLogin,userFromServer)) {
             Intent intent = new Intent(this, HomeActivity.class).putExtra(KEY_MAIN_USER, userLogin);
             startActivity(intent);
@@ -111,7 +110,6 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private boolean comparaUsuarios(Usuario user1,Usuario user2){
-//        return true;
         return (Objects.equals(user1.getApellido(), user2.getApellido()) && (Objects.equals(user1.getNombre(), user2.getNombre())));
     }
 

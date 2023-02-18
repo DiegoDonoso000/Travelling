@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(bindingMainActivity.getRoot());
         setValues();
         setListeners();
+        bindingMainActivity.homeButton.setEnabled(false);
+        bindingMainActivity.newAccountButton.setEnabled(false);
     }
 
     private void setValues() {

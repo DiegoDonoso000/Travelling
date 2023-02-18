@@ -38,4 +38,6 @@
     <string name="pointme">Me apunto</string>
     <string name="privacy_policy">Política de Privacidad</string>
     <string name="account_create_conditions">Ver Condiciones</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">wellcome to the lile fragment!</string>
 </resources>

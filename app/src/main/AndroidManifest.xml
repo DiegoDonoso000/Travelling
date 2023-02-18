@@ -51,6 +51,7 @@
         <activity
             android:name=".LoginActivity"
             android:exported="false"
+            android:theme="@style/Theme.Travelling.noBar.login"
             >
             <meta-data
                 android:name="android.app.lib_name"

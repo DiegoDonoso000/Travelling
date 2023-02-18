@@ -35,8 +35,6 @@ public class NewAccountActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bindingActivity = ActivityNewAccountBinding.inflate(getLayoutInflater());
-        Window window = this.getWindow();
-        window.setStatusBarColor(this.getColor(R.color.background_new_account));
         setContentView(bindingActivity.getRoot());
         setValues();
         setListeners();
@@ -143,6 +141,7 @@ public class NewAccountActivity extends AppCompatActivity {
     private void openCamera(View view) {
         phothoBitmap.launch(null);
     }
+
     private void openConditionsWeb(String url){
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
         startActivity(intent);
