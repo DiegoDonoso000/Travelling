@@ -1,24 +1,24 @@
 package es.travelWorld.travelling;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
+import es.travelWorld.travelling.databinding.FragmentBlueBinding;
 import es.travelWorld.travelling.databinding.FragmentLileBinding;
 
 
-public class LileFragment extends Fragment {
-    FragmentLileBinding binding;
+public class BlueFragment extends Fragment {
+    FragmentBlueBinding binding;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentLileBinding.inflate(inflater,container,false);
+        binding = FragmentBlueBinding.inflate(inflater,container,false);
         return binding.getRoot();
         // Inflate the layout for this fragment
 //        return inflater.inflate(R.layout.fragment_lile, container, false);

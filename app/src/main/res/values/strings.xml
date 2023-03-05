@@ -40,4 +40,8 @@
     <string name="account_create_conditions">Ver Condiciones</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">wellcome to the lile fragment!</string>
+    <string name="usuario_incorrecto_text">Login incorrecto, verifique los datos</string>
+    <string name="acepta_text">Entendido</string>
+    <string name="login_data_prefix">Tenemos usuario:</string>
+    <string name="hello_blank_fragment1">wellcome to de blue fragment!</string>
 </resources>

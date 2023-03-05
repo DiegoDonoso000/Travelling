@@ -12,7 +12,6 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
 import com.google.android.material.snackbar.Snackbar;
 import java.util.Objects;
 import es.travelWorld.travelling.databinding.ActivityLoginBinding;
@@ -20,7 +19,7 @@ import es.travelWorld.travelling.domain.Usuario;
 
 public class LoginActivity extends AppCompatActivity {
     ActivityLoginBinding bindingLoginActivity;
-    Usuario userFromServer;
+    Usuario userFromServer=new Usuario();
     private ActivityResultLauncher<Intent> resultActivity=registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
         if (result.getResultCode()== Activity.RESULT_OK){
             if(result.getData()!=null && result.getData().getExtras()!=null){
@@ -40,6 +39,12 @@ public class LoginActivity extends AppCompatActivity {
         bindingLoginActivity= ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(bindingLoginActivity.getRoot());
         setListeners();
+        setAdminUser();
+    }
+
+    private void setAdminUser() {
+        userFromServer.setApellido("ADMIN");
+        userFromServer.setNombre("ADMIN");
     }
 
     private void setListeners() {
@@ -89,7 +94,11 @@ public class LoginActivity extends AppCompatActivity {
         }
         else
         {
-            Toast.makeText(this, "Usuario incorrecto", Toast.LENGTH_LONG).show();
+            Snackbar badLogin = Snackbar.make(view,R.string.usuario_incorrecto_text, Snackbar.LENGTH_INDEFINITE);
+            badLogin.setAction(R.string.acepta_text, new badLoginOk());
+            badLogin.setBackgroundTint(getColor(R.color.purple_500));
+            badLogin.setActionTextColor(getColor(R.color.agua));
+            badLogin.show();
         }
     }
 
@@ -111,6 +120,17 @@ public class LoginActivity extends AppCompatActivity {
 
     private boolean comparaUsuarios(Usuario user1,Usuario user2){
         return (Objects.equals(user1.getApellido(), user2.getApellido()) && (Objects.equals(user1.getNombre(), user2.getNombre())));
+    }
+
+    public class badLoginOk implements View.OnClickListener {
+
+        @Override
+        public void onClick(View v) {
+            bindingLoginActivity.loginPassword.setText("");
+            bindingLoginActivity.loginUsuari.setText("");
+            bindingLoginActivity.loginUsuari.requestFocus();
+
+        }
     }
 
 }
